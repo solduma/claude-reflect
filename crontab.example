@@ -1,0 +1,12 @@
+# Claude Code Starter Kit — crontab example
+#
+# Schedules daily-reflection via system crontab.
+# Install: crontab crontab.example  (or crontab -e to add manually)
+#
+# Note: claude CLI must be in PATH.
+#       Use absolute path (/usr/local/bin/claude) if PATH differs.
+
+# Daily reflection at 21:43 weekdays
+43 21 * * 1-5 cd /path/to/your/project && claude -p "Run the daily-reflection skill to review today's work and update CLAUDE.md."
+
+# Logging: set MAILTO="" or redirect to a log file: >> ~/.claude/reflection-cron.log 2>&1
